@@ -13,21 +13,21 @@ Address:
 Contact:
   - owen.petchey@ieu.uzh.ch
 Editor:
-  - Name Surname
+  - Timothée Poisot
 Reviewer:
-  - Name Surname
-  - Name Surname
+  - Yoav Ram
+  - Federico Vaggi
 Publication:
-  received:  Sep,  1, 2015
-  accepted:  Sep, 1, 2015
-  published: Sep, 1, 2015
-  volume:    "**1**"
+  received:  Feb, 23, 2016
+  accepted:  Apr, 13, 2016
+  published: Apr, 22, 2016
+  volume:    "**2**"
   issue:     "**1**"
-  date:      Sep 2015
+  date:      Apr 2016
 Repository:
-  article:   "https://github.com/opetchey/ReScience-submission/tree/petchey-plebani-pennekamp-2016/article"
-  code:      "https://github.com/opetchey/ReScience-submission/tree/petchey-plebani-pennekamp-2016/code"
-  data:     "https://github.com/opetchey/ReScience-submission/tree/petchey-plebani-pennekamp-2016/data" 
+  article: "https://github.com/ReScience-Archives/Petchey-Plebani-Pennekamp-2016/tree/master/article"
+  code:    "https://github.com/ReScience-Archives/Petchey-Plebani-Pennekamp-2016/tree/master/code"
+  data:    "https://github.com/ReScience-Archives/Petchey-Plebani-Pennekamp-2016/tree/master/data" 
   notebook:  
 Reproduction:
   - "Benincà, E., Huisman, J., Heerkloss, R., Jöhnk, K.D., Branco, P., Van Nes, E.H., Scheffer, M. & Ellner, S.P. (2008) Chaos in a long-term experiment with a plankton community. Nature, 451, 822–825 DOI: 10.1038/nature06512"
@@ -35,8 +35,6 @@ Bibliography:
   article.bib
 
 ---
-
-# Draft article
 
 # Introduction
 
@@ -67,7 +65,7 @@ The R language and environment for statistical computing and graphics (@R) was u
 
 The reproduced populations dynamics (figure @fig:dynamics) were very similar to those in figure 1b-g of the original publication. As most analyses were performed on fourth root transformed values, we plot these, rather than raw abundances with a y-axis break as in the original article.
 
-![Observed population dynamics.](figures/obs_pop_dyn.pdf) {#fig:dynamics}
+![Observed population dynamics.](figures/obs_pop_dyn.pdf){#fig:dynamics}
 
 ## Data transformations
 
@@ -80,14 +78,14 @@ The original publication states that long sequences of zeros were removed from t
 
 The reproduced transformed data closely matched the published transformed data (figure @fig:trans_comp1).
 
-![Comparison of published transformed data with reproduced transformed data. The red line is the 1:1 line.](figures/zero_rem_trans_comparison.pdf) {#fig:trans_comp1}
+![Comparison of published transformed data with reproduced transformed data. The red line is the 1:1 line.](figures/zero_rem_trans_comparison.pdf){#fig:trans_comp1}
 
 
 ## Correlations among species abundances
 
 Correlations among species abundances presented in Table 1 of the original article closely matched our reproduced correlations, calculated from the transformed data with zeros removed (figure @fig:corr_comp). Deviations between the original and reproduced correlations are relatively small and infrequent. 
 
-![Comparison of calculated correlations among species abundances in the original article and this reproduction.](figures/correlation_comparison.pdf) {#fig:corr_comp}
+![Comparison of calculated correlations among species abundances in the original article and this reproduction.](figures/correlation_comparison.pdf){#fig:corr_comp}
 
 Highlighted in the text of the original paper were: negative correlations of picophytoplankton with protozoa, and of nanophytoplankton both with rotifers and calanoid copepods, positive correlation of picophytoplankton with calanoid copepods, negative correlation between bacteria and ostracods, and positive correlation between bacteria and phosphorus. All of these correlations were at least qualitatively reproduced.
 
@@ -100,17 +98,17 @@ Spectral analyses in the original paper were presented graphically in figures S3
 
 The original article states: "the distance between initially nearby trajectories increased over time, and reached a plateau after about 20–30 days". The reproduced results (figure @fig:divergence) are consistent with this statement. The original article also stated that the analyses "yielded significantly positive Lyapunov exponents of strikingly similar value for all species (Fig. 3; mean exponent = 0.057 per day, s.d. = 0.005 per day, n = 9)". Reproduced exponents had very similar mean value, but had larger standard deviation (mean = 0.060 and s.d. = 0.014), resulting from quantitative differences in reproduced divergence rates (figure @fig:divergence) and therefore Lyapunov exponents (figure @fig:LE_comparison). 
 
-![Reproduced divergence rates and Lyapunov exponents (equivalent to figure 3 in the original article).](figures/div_rate.pdf) {#fig:divergence}
+![Reproduced divergence rates and Lyapunov exponents (equivalent to figure 3 in the original article).](figures/div_rate.pdf){#fig:divergence}
 
 <div style="width:400px; height=400px">
-![Comparison of original and reproduced directly estimated Lyapunov exponents.](figures/LE_comparison.pdf) {#fig:LE_comparison}
+![Comparison of original and reproduced directly estimated Lyapunov exponents.](figures/LE_comparison.pdf){#fig:LE_comparison}
 </div>
 
 ## Lyapunov exponents by indirect method
 
 The data received directly from Stephen Ellner (file 'interp_short_allsystem_newnames.csv' in the reproduction repository) was interpolated, but without zeros removed. The reproduced interpolated data, without zeros removed, matched closely this data (figure @fig:trans_comp2). 
 
-![Comparison of interpolated data provided by Ellner with reproduced interpolated data (no removal of zeros). The red line is the 1:1 line.](figures/repro_ellner_comp.pdf) {#fig:trans_comp2}
+![Comparison of interpolated data provided by Ellner with reproduced interpolated data (no removal of zeros). The red line is the 1:1 line.](figures/repro_ellner_comp.pdf){#fig:trans_comp2}
 
 The original paper reported a global Lyapunov exponent calculated via two modelling approaches (neural network and generalised additive models [GAMs]). Only the GAM approach was reproduced, with the assistance of code donated by Stephen Ellner. The original article obtained
 a global Lyapunov exponent of 0.08 per day. The reproduced value was 0.04. We did not reproduce the bootstrapping used to give confidence intervals around this estimate.
@@ -120,7 +118,7 @@ a global Lyapunov exponent of 0.08 per day. The reproduced value was 0.04. We di
 
 The article stated: "For short-term forecasts of only a few days, most species had a high predictability of R2 = 0.70 – 0.90 (Fig. 2). However, the predictability of the species was much reduced when prediction times were extended to 15–30 days." The reproduced predictabilities, which were calculated from the GAMs, were consistent with these qualitative statements, and were most often quantitatively similar (@fig:prediction_distance). We did not reproduce the predictability estimates for linear models.
 
-![Predictability (correlation between predicted and observed abundances) and prediction distance (days) (figure 2 in the original article). Reproducted data in red, and data from original publication in black.](figures/prediction_distance.pdf) {#fig:prediction_distance}
+![Predictability (correlation between predicted and observed abundances) and prediction distance (days) (figure 2 in the original article). Reproducted data in red, and data from original publication in black.](figures/prediction_distance.pdf){#fig:prediction_distance}
 
 
 # Conclusion
